@@ -80,6 +80,7 @@ img {
 
 .site-nav {
   display: flex;
+
   /* margin-left: 85px; */
 }
 .header-nav {
@@ -113,6 +114,26 @@ img {
 .site-nav .carrent {
   color: var(--accent-color);
 }
+/* .site-nav .carrent::after {
+  content: '';
+  width: 10px;
+  height: 4px;
+  color: blue;
+} */
+/* .item {
+  position: relative;
+}
+.blue-line:: after {
+  content: '';
+
+  color: blue;
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background-color: var(--accent-color);
+  bottom: 0;
+  border-radius: 2px;
+} */
 /* auth-nav */
 
 .auth-nav {
@@ -153,10 +174,6 @@ img {
   fill: currentColor;
   margin-right: 10px;
 }
-/* .auth-nav-icon:hover,
-.auth-nav-icon:focus {
-  fill: var(--accent-color);
-} */
 
 /* стили для index.html */
 /* герой */
@@ -262,6 +279,7 @@ img {
   justify-content: center;
 }
 .works .item {
+  position: relative;
   margin-right: 30px;
 }
 .works .item:last-child {
@@ -269,6 +287,10 @@ img {
 }
 
 .section-work {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+
   text-transform: uppercase;
   color: var(--text-white-color);
   background-color: rgba(47, 48, 58, 0.8);
@@ -525,6 +547,8 @@ img {
 .knopka:focus {
   background-color: var(--accent-color);
   color: var(--text-white-color);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 3px 1px rgba(0, 0, 0, 0.1);
 }
 .card .works {
   display: flex;
@@ -578,11 +602,23 @@ img {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
+.popup-text {
+  position: relative;
+  width: 370px;
+  height: 294px;
+  overflow: hidden;
+}
 
-/* .card-text {
+.card-text {
+  position: absolute;
+  width: 100%;
+  padding: 63px 24px;
+  transform: translateY(0px);
+
+  /* bottom: 0; */
   color: var(--text-white-color);
   background-color: rgba(33, 150, 243, 0.9);
 
   font-size: 18px;
   line-height: 1.56;
-} */
+}
